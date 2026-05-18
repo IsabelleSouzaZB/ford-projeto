@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Inter', sans-serif;
+    color:#000935;
+}
+
+body{
+    background:white;
+    color:white;
+    overflow-x:hidden;
+}
+
+header{
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:linear-gradient(to bottom, #000620, transparent);
+}
+
+#cor{
+    color:white;
+}
+
+.logo img{
+    width:95px;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#008cff;
+}
+
+.hero{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    align-items:center;
+    padding:120px 80px 80px;
+    background:
+    linear-gradient(to right, rgba(0,0,0,0.82), rgba(0,0,0,0.25)),
+    url("img/fundo.jpg");
+    background-size:cover;
+    background-position:right center;
+}
+
+.hero-image{
+    display:none;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:78px;
+    line-height:1;
+    margin-bottom:25px;
+    text-transform:uppercase;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.hero-text p{
+    font-size:20px;
+    color:#d0d0d0;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 36px;
+    background:#00095b;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.4s;
+    border:none;
+}
+
+.btn:hover{
+    background:#008cff;
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,140,255,0.4);
+    cursor:pointer;
+}
+
+
+.sustentabilidade{
+    padding:120px 80px;
+    text-align:center;
+    background:#ffffff;
+}
+
+.sustentabilidade span{
+    color:#000935;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:14px;
+}
+
+.sustentabilidade h2{
+    font-size:70px;
+    margin:25px 0 35px;
+    line-height:1.1;
+    font-weight:900;
+}
+
+.carros{
+    padding:100px 80px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    background:#050505;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    background:#111;
+    transition:.5s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.card:hover img{
+    transform:scale(1.06);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.95), transparent 60%);
+    z-index:1;
+}
+
+.card h3{
+    position:absolute;
+    bottom:90px;
+    left:25px;
+    z-index:2;
+    font-size:30px;
+    font-weight:800;
+}
+
+.card .btn{
+    position:absolute;
+    bottom:25px;
+    left:25px;
+    z-index:2;
+}
+
+footer{
+    background:#ffffff;
+    padding:80px;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.footer-logo{
+    max-width:350px;
+}
+
+.footer-logo h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.footer-logo p{
+    color:#000935;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.social{
+    display:flex;
+    gap:20px;
+}
+
+.social a{
+    color:white;
+    font-size:22px;
+    transition:.3s;
+}
+
+.social a:hover{
+    color:#008cff;
+    transform:translateY(-5px);
+}
+
+.footer-links{
+    display:flex;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+.footer-links h4{
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.footer-links ul{
+    list-style:none;
+}
+
+.footer-links ul li{
+    margin-bottom:12px;
+}
+
+.footer-links ul li a{
+    text-decoration:none;
+    color:#000935;
+    transition:.3s;
+}
+
+.footer-links ul li a:hover{
+    color:#008cff;
+}
+
+.input{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.input input{
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    width:220px;
+    background:#cecece;
+    color:#000935;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1000px){
+
+    .hero{
+        grid-template-columns:1fr;
+        padding:140px 30px 80px;
+    }
+
+    .hero-text h1{
+        font-size:52px;
+    }
+
+    .sustentabilidade h2{
+        font-size:46px;
+    }
+
+    .carros{
+        grid-template-columns:1fr;
+        padding:60px 25px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+    }
+
+    nav ul{
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-text h1{
+        font-size:42px;
+    }
+
+    .hero-text p{
+        font-size:17px;
+    }
+
+    .sustentabilidade{
+        padding:80px 25px;
+    }
+
+    .sustentabilidade h2{
+        font-size:38px;
+    }
+
+    footer{
+        padding:60px 25px;
+    }
+
+}
+.copyright{
+    width:100%;
+    margin-top:70px;
+    padding-top:30px;
+    border-top:1px solid #000935;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.copyrightLink{
+    text-decoration:none;
+}
+
+.copyright h4{
+    color:#000935;
+    font-size:14px;
+    font-weight:400;
+    letter-spacing:.5px;
+    transition:.3s;
+}
+
+.copyright h4:hover{
+    color:#008cff;
+}
