@@ -1,0 +1,91 @@
+body {
+    background-color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+.pagina {
+    width: 400px;
+    margin: 300px auto;
+    overflow: hidden;
+
+
+
+    }
+    .topo {
+        height: 70px;
+        background-color: #2d2d2d;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 20px;
+
+
+
+    }
+    .bolinha {
+        width: 25px;
+        height: 25px;
+        background-color: #17d4d4;
+        border-radius: 50%;
+
+
+
+    }
+    conteudo-principal {
+        display: flex;
+
+
+
+
+
+    }
+    .navegação {
+        width: 90px;
+        background-color: #f58a33;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 10px;
+
+
+
+    }
+    .centro{
+        flex: 1;
+
+
+
+    }
+    .cabecalho {
+        height: 50px;
+        background-color: #0fa5d8;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+    .lateral{
+        flex: 1;
+        display: flex;
+        height: 50px;
+        background-color: #0fa5d8;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+
+
+  
