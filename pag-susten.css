@@ -1,3 +1,8 @@
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
 :root {
     --azul: #000935;
     --azul-escuro: #00095b;
@@ -5,20 +10,91 @@
     --texto-suave: #d0d0d0;
 }
 
-/* ---------- HERO: foto desta página ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+#cor {
+    color: white;
+}
+
+/* =========================================
+   HERO - BANNER SUSTENTABILIDADE
+========================================= */
+
 .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    padding: 140px 80px 80px;
+
     background:
-        linear-gradient(to right, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.25)),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.25)
+        ),
         url("img/sustentabilidade1.jpg");
+
     background-size: cover;
     background-position: right center;
 }
 
-.hero-text h1 {
-    color: #fff;
+.hero-text {
+    max-width: 600px;
 }
 
-/* ---------- METAS (branco, como "Impacto mais sustentável") ---------- */
+.hero-text h1 {
+    color: #fff;
+    font-size: clamp(42px, 6vw, 78px);
+    line-height: 1;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #d0d0d0;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.btn {
+    display: inline-block;
+    padding: 15px 36px;
+    background: #00095b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    border: none;
+    transition: .4s;
+}
+
+.btn:hover {
+    background: #008cff;
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 140, 255, .3);
+    cursor: pointer;
+}
+
+/* =========================================
+   METAS DE SUSTENTABILIDADE
+========================================= */
+
 .susten-metas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -45,7 +121,10 @@
     color: var(--azul);
 }
 
-/* ---------- TEXTO + IMAGEM (escuro) ---------- */
+/* =========================================
+   TEXTO + IMAGEM
+========================================= */
+
 .susten-texto {
     display: flex;
     align-items: center;
@@ -90,7 +169,10 @@
     object-fit: cover;
 }
 
-/* ---------- BLOCOS COM GRADE ---------- */
+/* =========================================
+   BLOCOS COM GRADE
+========================================= */
+
 .susten-bloco {
     padding: 120px 80px;
     text-align: center;
@@ -121,7 +203,8 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* cards no bloco branco (ações) */
+/* Cards */
+
 .susten-item {
     padding: 40px 30px;
     text-align: left;
@@ -129,7 +212,7 @@
     border: 1px solid #e3e6ee;
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 9, 53, 0.08);
-    transition: 0.5s;
+    transition: .5s;
 }
 
 .susten-item:hover {
@@ -154,7 +237,10 @@
     color: var(--azul);
 }
 
-/* bloco "claro" = vantagens, que fica ESCURO (igual à seção de carros) */
+/* =========================================
+   BLOCO ESCURO - VANTAGENS
+========================================= */
+
 .susten-bloco.claro {
     background: #050505;
 }
@@ -181,13 +267,22 @@
     color: var(--texto-suave);
 }
 
-/* ---------- CHAMADA FINAL (escura, com a foto, como o hero) ---------- */
+/* =========================================
+   CHAMADA FINAL
+========================================= */
+
 .susten-final {
     padding: 140px 80px;
     text-align: center;
+
     background:
-        linear-gradient(to right, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.55)),
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.82),
+            rgba(0, 0, 0, 0.55)
+        ),
         url("img/sustentabilidade.jpg");
+
     background-size: cover;
     background-position: center;
 }
@@ -201,8 +296,194 @@
     color: #fff;
 }
 
-/* ---------- RESPONSIVO ---------- */
+.susten-final .btn {
+    background: #fff;
+    color: #00095b;
+}
+
+.susten-final .btn:hover {
+    background: #008cff;
+    color: #fff;
+}
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+    background: #ffffff;
+    color: #000935;
+    padding: 80px 80px 40px;
+    border-top: 1px solid #e3e6ee;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1 1 280px;
+    max-width: 350px;
+}
+
+.footer-logo h2 {
+    color: #000935;
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    color: #000935;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Redes sociais */
+
+.social {
+    display: flex;
+    gap: 14px;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #000935;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.social a i {
+    color: #fff;
+}
+
+.social a:hover {
+    background: #008cff;
+    transform: translateY(-5px);
+}
+
+/* Links do rodapé */
+
+.footer-links {
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.footer-links h4 {
+    margin-bottom: 20px;
+    color: #000935;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #000935;
+    transition: .3s;
+}
+
+.footer-links ul li a:hover {
+    color: #008cff;
+}
+
+.footer-links p {
+    max-width: 260px;
+    line-height: 1.6;
+}
+
+/* Formulário */
+
+.input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.input input {
+    width: 220px;
+    padding: 14px 18px;
+    border: 1px solid #e3e6ee;
+    outline: none;
+    border-radius: 50px;
+    background: #f3f5fa;
+    color: #000935;
+    transition: .3s;
+}
+
+.input input:focus {
+    border-color: #008cff;
+}
+
+.input .btn {
+    padding: 14px 28px;
+}
+
+/* Copyright */
+
+.copyright {
+    width: 100%;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e3e6ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.copyrightLink {
+    text-decoration: none;
+}
+
+.copyright h4 {
+    color: #000935;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    transition: .3s;
+}
+
+.copyright h4:hover {
+    color: #008cff;
+}
+
+/* =========================================
+   RESPONSIVIDADE DAS SEÇÕES
+========================================= */
+
 @media (max-width: 1000px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 160px 30px 80px;
+    }
+
+    .hero-text h1 {
+        font-size: 52px;
+    }
+
     .susten-metas {
         grid-template-columns: 1fr;
         padding: 80px 25px;
@@ -227,9 +508,26 @@
     .susten-final h2 {
         font-size: 46px;
     }
+
+    .footer-links {
+        gap: 50px;
+    }
 }
 
 @media (max-width: 768px) {
+
+    .hero {
+        padding: 190px 25px 80px;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
     .susten-metas {
         padding: 60px 25px;
     }
@@ -239,446 +537,47 @@
     .susten-final h2 {
         font-size: 38px;
     }
-}
 
-#cor{
-    color:white;
-}
-
-.logo img{
-    width:80px;
-    display:block;
-}
-
-
-header {
-    width: 100%;
-    padding: 20px 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background: linear-gradient(to bottom, #000620, transparent);
-}
-
-.logo img {
-    width: 95px;
-}
-
-nav ul {
-    display: flex;
-    gap: 35px;
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: .3s;
-}
-
-nav ul li a:hover {
-    color: #008cff;
-}
-
-/* linha azul que cresce ao passar o mouse */
-nav ul li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:0;
-    height:2px;
-    background:#008cff;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#008cff;
-}
-
-nav ul li a:hover::after{
-    width:100%;
-}
-
-/* ==========================================================
-   RODAPÉ
-   ========================================================== */
-footer{
-    background:#ffffff;
-    padding:80px 80px 40px;
-    border-top:1px solid #e3e6ee;
-}
-
-.footer-container{
-    display:flex;
-    justify-content:space-between;
-    gap:50px;
-    flex-wrap:wrap;
-}
-
-.footer-logo{
-    flex:1 1 280px;
-    max-width:350px;
-}
-
-.footer-logo h2{
-    font-size:42px;
-    font-weight:900;
-    margin-bottom:20px;
-}
-
-.footer-logo p{
-    color:#000935;
-    line-height:1.7;
-    margin-bottom:30px;
-}
-
-/* ícones sociais em círculos */
-.social{
-    display:flex;
-    gap:14px;
-}
-
-.social a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:44px;
-    height:44px;
-    border-radius:50%;
-    background:#000935;
-    color:white;
-    font-size:18px;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.social a i{
-    color:white;
-}
-
-.social a:hover{
-    background:#008cff;
-    transform:translateY(-5px);
-}
-
-.footer-links{
-    display:flex;
-    gap:70px;
-    flex-wrap:wrap;
-}
-
-.footer-links h4{
-    margin-bottom:20px;
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
-
-.footer-links ul{
-    list-style:none;
-}
-
-.footer-links ul li{
-    margin-bottom:12px;
-}
-
-.footer-links ul li a{
-    text-decoration:none;
-    color:#000935;
-    transition:.3s;
-}
-
-.footer-links ul li a:hover{
-    color:#008cff;
-}
-
-.footer-links p{
-    max-width:260px;
-    line-height:1.6;
-}
-
-.input{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:15px;
-}
-
-.input input{
-    width:220px;
-    padding:14px 18px;
-    border:1px solid #e3e6ee;
-    outline:none;
-    border-radius:50px;
-    background:#f3f5fa;
-    color:#000935;
-    transition:.3s;
-}
-
-.input input:focus{
-    border-color:#008cff;
-}
-
-.input .btn{
-    padding:14px 28px;
-}
-
-.copyright{
-    width:100%;
-    margin-top:60px;
-    padding-top:30px;
-    border-top:1px solid #e3e6ee;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.copyrightLink{
-    text-decoration:none;
-}
-
-.copyright h4{
-    color:#000935;
-    font-size:14px;
-    font-weight:400;
-    letter-spacing:.5px;
-    transition:.3s;
-}
-
-.copyright h4:hover{
-    color:#008cff;
-}
-
-/* ==========================================================
-   RESPONSIVO
-   ========================================================== */
-
-/* notebooks pequenos: o menu com 6 links aperta, então diminui o espaço */
-@media(max-width:1200px){
-
-    header{
-        padding:16px 40px;
+    .susten-texto {
+        gap: 35px;
     }
 
-    nav ul{
-        gap:22px;
-    }
-
-}
-
-@media(max-width:1000px){
-
-    .hero{
-        grid-template-columns:1fr;
-        padding:160px 30px 80px;
-    }
-
-    .hero-text h1{
-        font-size:52px;
-    }
-
-    .sustentabilidade h2{
-        font-size:46px;
-    }
-
-    .carros{
-        grid-template-columns:1fr;
-        padding:60px 25px;
-    }
-
-    .footer-links{
-        gap:50px;
-    }
-
-}
-
-@media(max-width:768px){
-
-    header{
-        flex-direction:column;
-        gap:12px;
-        padding:14px 20px;
-    }
-
-    nav ul{
-        gap:8px 18px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    nav ul li a{
-        font-size:12px;
-    }
-
-    .hero{
-        padding:190px 25px 80px;
-    }
-
-    .hero-text h1{
-        font-size:42px;
-    }
-
-    .hero-text p{
-        font-size:17px;
-    }
-
-    .sustentabilidade{
-        padding:80px 25px;
-    }
-
-    .sustentabilidade h2{
-        font-size:38px;
-    }
-
-    footer{
-        padding:60px 25px 30px;
+    footer {
+        padding: 60px 25px 30px;
     }
 
     .footer-container,
-    .footer-links{
-        flex-direction:column;
-        gap:35px;
+    .footer-links {
+        flex-direction: column;
+        gap: 35px;
     }
 
-    .input input{
-        width:100%;
+    .input input {
+        width: 100%;
     }
 
-    .input .btn{
-        width:100%;
+    .input .btn {
+        width: 100%;
     }
-
 }
-
-
-
-/* ===== IDENTIDADE VISUAL ALINHADA AO estiloProjeto.css ===== */
-:root {
-    --azul: #000935;
-    --azul-escuro: #00095b;
-    --destaque: #008cff;
-    --texto-suave: #d0d0d0;
-}
-html { scroll-behavior: smooth; }
-body { overflow-x: hidden; font-family: 'Inter', sans-serif; }
 
 /* =========================================
-   CABEÇALHO - IDENTIDADE estiloProjeto.css
+   CABEÇALHO PADRÃO - PROJETO FORD
 ========================================= */
 
 header {
     width: 100%;
+    height: 90px;
     padding: 20px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1000;
     background: linear-gradient(to bottom, #000620, transparent);
-}
-
-.logo img {
-    width: 95px;
-}
-
-nav ul {
-    display: flex;
-    gap: 35px;
-    list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: .3s;
-}
-
-nav ul li a:hover {
-    color: #008cff;
-}
-
-/* Banner: conserva o background/foto que já está definido acima */
-.hero {
-    min-height: 100vh; display: grid; grid-template-columns: 1fr 1.2fr;
-    align-items: center; padding: 140px 80px 80px;
-    background-size: cover; background-position: right center;
-}
-.hero-text { max-width: 600px; }
-.hero-text h1 {
-    color: #fff; font-size: clamp(42px, 6vw, 78px); line-height: 1;
-    margin-bottom: 25px; text-transform: uppercase; font-weight: 900;
-    letter-spacing: 2px;
-}
-.hero-text p { font-size: 20px; color: #d0d0d0; line-height: 1.7; margin-bottom: 35px; }
-
-/* Botões */
-.btn {
-    display: inline-block; padding: 15px 36px; background: #00095b;
-    color: #fff; text-decoration: none; border-radius: 50px;
-    font-weight: 700; border: none; transition: .4s;
-}
-.btn:hover {
-    background: #008cff; color: #fff; transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,140,255,.3); cursor: pointer;
-}
-
-/* Consistência dos cartões */
-.susten-texto img, .susten-item { border-radius: 24px; }
-.susten-item { transition: .5s; }
-.susten-item:hover { transform: translateY(-10px); }
-
-/* Chamada final: conserva a foto original */
-.susten-final { background-size: cover; background-position: center; }
-.susten-final .btn { background: #fff; color: #00095b; }
-.susten-final .btn:hover { background: #008cff; color: #fff; }
-
-/* Rodapé branco, azul-marinho e detalhes azuis */
-footer { background: #fff; color: #000935; padding: 80px 80px 40px; border-top: 1px solid #e3e6ee; }
-.footer-logo h2 { color: #000935; font-size: 42px; font-weight: 900; margin-bottom: 20px; }
-.footer-logo p { color: #000935; line-height: 1.7; margin-bottom: 30px; }
-.footer-links h4 {
-    color: #000935; font-size: 14px; font-weight: 800;
-    letter-spacing: 2px; text-transform: uppercase;
-}
-.footer-links p, .footer-links ul li a { color: #000935; }
-.footer-links ul li a { text-decoration: none; transition: .3s; }
-.footer-links ul li a:hover, .copyright h4:hover { color: #008cff; }
-.social a {
-    background: #000935; color: #fff; transition: .3s;
-}
-.social a i { color: #fff; }
-.social a:hover { background: #008cff; transform: translateY(-5px); }
-.input input {
-    border: 1px solid #e3e6ee; border-radius: 50px;
-    background: #f3f5fa; color: #000935;
-}
-.input input:focus { border-color: #008cff; }
-.copyright { border-top: 1px solid #e3e6ee; }
-.copyright h4 {
-    color: #000935; font-size: 14px; font-weight: 400;
-    letter-spacing: .5px; transition: .3s;
-}
-
-/* ===== MENU RESPONSIVO ===== */
-
-header {
-    box-sizing: border-box;
-    gap: 30px;
 }
 
 .logo {
@@ -687,6 +586,7 @@ header {
 
 .logo img {
     width: 95px;
+    display: block;
 }
 
 nav {
@@ -698,9 +598,10 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 18px 25px;
+    gap: 25px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -708,30 +609,60 @@ nav ul li {
 }
 
 nav ul li a {
-    white-space: nowrap;
     position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: .3s;
 }
 
-/* Notebooks */
+nav ul li a:hover {
+    color: #008cff;
+}
+
+/* Linha azul do menu */
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #008cff;
+    transition: .3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Cabeçalho em notebooks */
+
 @media (max-width: 1200px) {
+
     header {
         padding: 16px 35px;
-        gap: 20px;
     }
 
     nav ul {
-        gap: 14px 18px;
+        gap: 18px;
     }
 
     nav ul li a {
         font-size: 12px;
-        letter-spacing: 0.5px;
     }
 }
 
-/* Tablets e celulares */
+/* Cabeçalho em celulares */
+
 @media (max-width: 768px) {
+
     header {
+        height: auto;
         flex-direction: column;
         gap: 15px;
         padding: 14px 20px;
@@ -742,11 +673,8 @@ nav ul li a {
     }
 
     nav ul {
+        flex-wrap: wrap;
         justify-content: center;
         gap: 12px 18px;
-    }
-
-    nav ul li a {
-        font-size: 12px;
     }
 }
