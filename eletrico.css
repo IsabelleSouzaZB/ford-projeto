@@ -1,0 +1,315 @@
+.hero {
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.25)),
+        url("img/2022-ford-f-150-lightning-tested-102-1656624439.avif");
+    background-size: cover;
+    background-position: right center;
+}
+
+
+.hero-text h1 {
+    color: #fff;
+}
+
+
+/* =========================================
+   CABEÇALHO PADRÃO - PROJETO FORD
+========================================= */
+
+header {
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    gap: 30px;
+    background: linear-gradient(to bottom, #000620, transparent);
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 95px;
+    display: block;
+}
+
+nav {
+    flex: 1;
+    min-width: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    flex-shrink: 0;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: #008cff;
+}
+
+/* Linha azul ao passar o mouse */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #008cff;
+    transition: .3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Notebooks */
+@media (max-width: 1200px) {
+    header {
+        padding: 16px 35px;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 14px 18px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+        letter-spacing: .5px;
+    }
+}
+
+/* Celulares e tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 14px 20px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE DO CABEÇALHO
+========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.el-numeros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 100px 80px;
+    text-align: center;
+    background: #ffffff;
+}
+
+.el-numero strong {
+    display: block;
+    font-size: 70px;
+    line-height: 1.1;
+    font-weight: 900;
+    color: #000935;
+}
+
+.el-numero span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000935;
+}
+
+/* ---------- DESEMPENHO (mesmo clima da seção de carros) ---------- */
+.el-bloco {
+    padding: 100px 80px;
+    text-align: center;
+    background: #050505;
+}
+
+.el-bloco h2 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.el-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.el-item {
+    padding: 40px 30px;
+    border-radius: 24px;
+    background: #111;
+    text-align: left;
+    transition: 0.5s;
+}
+
+.el-item:hover {
+    transform: translateY(-10px);
+}
+
+.el-item i {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #008cff;
+}
+
+.el-item h3 {
+    margin-bottom: 12px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.el-item p {
+    line-height: 1.7;
+    color: #d0d0d0;
+}
+
+/* ---------- VÍDEO ---------- */
+.el-video {
+    display: flex;
+    justify-content: center;
+    padding: 0 80px 100px;
+    background: #050505;
+}
+
+.el-video video {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 24px;
+}
+
+/* ---------- CHAMADA FINAL ---------- */
+.el-final {
+    padding: 120px 80px;
+    text-align: center;
+    background: linear-gradient(to bottom, #000620, #00095b);
+}
+
+.el-final h2 {
+    margin-bottom: 20px;
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.el-final p {
+    max-width: 600px;
+    margin: 0 auto 35px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #d0d0d0;
+}
+
+.el-final .btn {
+    background: #fff;
+    color: #000935;
+}
+
+.el-final .btn:hover {
+    background: #008cff;
+    color: #fff;
+}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 1000px) {
+    .el-numeros {
+        grid-template-columns: 1fr;
+        padding: 60px 25px;
+    }
+
+    .el-numero strong {
+        font-size: 52px;
+    }
+
+    .el-bloco {
+        padding: 60px 25px;
+    }
+
+    .el-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .el-video {
+        padding: 0 25px 60px;
+    }
+
+    .el-bloco h2,
+    .el-final h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .el-final {
+        padding: 80px 25px;
+    }
+
+    .el-bloco h2,
+    .el-final h2 {
+        font-size: 34px;
+    }
+}
