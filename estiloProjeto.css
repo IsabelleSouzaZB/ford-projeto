@@ -440,3 +440,139 @@ footer{
 .copyright h4:hover{
     color:#008cff;
 }
+
+
+/* =========================================
+   RESPONSIVIDADE MOBILE - PROJETO FORD
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* CABEÇALHO */
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 15px 12px 18px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 6, 32, 0.95),
+            rgba(0, 6, 32, 0.35)
+        );
+    }
+
+    /* LOGO */
+    .logo img {
+        width: 75px;
+        margin: 0 auto;
+    }
+
+    /* MENU */
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        justify-content: center;
+        align-items: center;
+        gap: 14px 18px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+        letter-spacing: 0.4px;
+        white-space: nowrap;
+    }
+
+    /* BANNER */
+    .hero {
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        padding: 220px 25px 65px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(38px, 9vw, 52px);
+        line-height: 1.05;
+        letter-spacing: 0;
+        margin-bottom: 22px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+    }
+
+    .hero .btn {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+
+    /* SEÇÕES */
+    .sustentabilidade,
+    .susten-metas,
+    .susten-texto,
+    .susten-bloco,
+    .susten-final {
+        padding: 60px 25px;
+    }
+
+    /* RODAPÉ */
+    footer {
+        padding: 50px 25px 25px;
+    }
+}
+
+/* CELULARES MENORES */
+@media (max-width: 380px) {
+
+    nav ul {
+        gap: 12px 10px;
+    }
+
+    nav ul li a {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 210px 20px 55px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+}
